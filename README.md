@@ -16,5 +16,3 @@ Below there are a few annotations that I think are importante to understand the 
   - The creation of the local server can be made through `sqllocaldb create "Database Name"` and the database is created by executing the first migration;
 - Before anything else, it's important to execute `dotnet tool install --global dotnet-ef` to install the EF tools ([SO reference](https://stackoverflow.com/questions/57066856/command-dotnet-ef-not-found));
 - It is important to deal with the new possibilities of nullable variables in C# 8.0. For that, use [this](https://stackoverflow.com/questions/57342964/how-can-i-hint-the-c-sharp-8-0-nullable-reference-system-that-a-property-is-init);
-
-:runner: this is an ongoing project :grinning:.
