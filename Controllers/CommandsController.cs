@@ -4,9 +4,22 @@ using Microsoft.AspNetCore.Mvc;
 [Route("api/[controller]")]
 public class CommandsController : ControllerBase
 {
-    [HttpGet]
-    public ActionResult<IEnumerable<string>> GetString()
+    private readonly CommandContext _context;
+
+    public CommandsController(CommandContext context)
     {
-        return new string[] { "this", "is", "easy" };
+        _context = context;
     }
+
+    [HttpGet]
+    public ActionResult<IEnumerable<Command>?> GetCommandItems()
+    {
+        return _context.CommandItems;
+    }
+
+    // [HttpGet]
+    // public ActionResult<IEnumerable<string>> GetString()
+    // {
+    //     return new string[] { "this", "is", "easy" };
+    // }
 }
