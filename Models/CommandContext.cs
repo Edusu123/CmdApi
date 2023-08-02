@@ -7,5 +7,5 @@ public class CommandContext : DbContext
 
     }
 
-    public DbSet<Command>? CommandItems { get; set; }
+    public DbSet<Command> CommandItems { get; set; } = null!;
 }

@@ -12,7 +12,7 @@ public class CommandsController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<Command>?> GetCommandItems()
+    public ActionResult<IEnumerable<Command>> GetCommandItems()
     {
         return _context.CommandItems;
     }
